@@ -33,4 +33,6 @@ urlpatterns = [
     path('dealers/', TemplateView.as_view(template_name="index.html")),
     # add path for showing the dealer page
     path('dealer/<int:dealer_id>',TemplateView.as_view(template_name="index.html")),
+    # add path to post review page
+    path('postreview/<int:dealer_id>',TemplateView.as_view(template_name="index.html")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
