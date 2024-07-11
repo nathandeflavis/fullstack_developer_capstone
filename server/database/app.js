@@ -24,8 +24,7 @@ try {
   });
   Dealerships.deleteMany({}).then(()=>{
     Dealerships.insertMany(dealerships_data.dealerships);
-  });
-  
+  });  
 } catch (error) {
   res.status(500).json({ error: 'Error fetching documents' });
 }
@@ -114,6 +113,26 @@ app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
 		console.log(error);
     res.status(500).json({ error: 'Error inserting review' });
   }
+});
+
+//implement '/fetchReviews/car/:carmake' endpoint
+app.get('/fetchReviews/car/:carmake', async (req, res) => {
+    try {
+        const documents = await Reviews.find({car_make: req.params.carmake});
+        res.json(documents);
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching documents' });
+    }
+});
+
+//implement '/fetchReviews/car/:carmake/:model' endpoint
+app.get('/fetchReviews/car/:carmake/:model', async (req, res) => {
+    try {
+        const documents = await Reviews.find({car_make: req.params.carmake, car_model: req.params.model});
+        res.json(documents);
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching documents' });
+    }
 });
 
 // Start the Express server
