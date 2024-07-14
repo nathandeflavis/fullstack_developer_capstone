@@ -5,17 +5,7 @@ A car dealership website ([Full Stack Application Development Capstone Project](
 The project is a car dealership website that allows new and existing customers to look up different branches by state and look at customer reviews of the various branches.
 
 # Why is the project useful?
-As part of the certificate, I learnt:
-- CSS
-- Django
-- Docker
-- Express.js
-- HTML
-- Kubernetes
-- Node.js
-- React.js
-
-The project is an opportunity to use all of these technologies together in the same application.
+As part of the certificate, I learnt a full stack of software development technologies. The project is an opportunity to use most of these technologies together in the same application.
 
 # How can users can get started with the project?
 You can run the application in [an IBM Skills Network lab environment](https://skills.network).
