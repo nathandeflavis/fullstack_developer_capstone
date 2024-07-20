@@ -1,3 +1,4 @@
+//Set up a MongoDB schema
 const { Int32 } = require('mongodb');
 const mongoose = require('mongoose');
 
